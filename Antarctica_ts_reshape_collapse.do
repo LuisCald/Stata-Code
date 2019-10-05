@@ -34,7 +34,7 @@ estadd ysumm
 * 3) With controls
 /*eststo clear
 foreach var in `Dep'{
-eststo: reg `var' prussia_ind _near_dist i._near_fid, robust
+eststo: reg `var' west_antarctica _near_dist i._near_fid, robust
 estadd ysumm 
 }*/
 
@@ -240,7 +240,7 @@ rename Aopc17 Aopc2017
 drop v1
 reshape long _ p A_ Aopc grpc, i(k) j(year)
 destring Kreise, replace force
-use "C:\Users\Jrxz12\Dropbox\Germany_state\2_Analysis\2_period_data\5_reunification\Final_output_stata_long.dta", clear
+use "C:\Users\Y\X.dta", clear
 * Process of creating time series graphs. Growth rate and output. 
 * Restore occurs automatically after completion of the do-file
 * YOU MUST REMEMBER TO PRESERVE ON YOUR OWN
@@ -324,7 +324,7 @@ gen id=_n
 line mean id
 
 *Generating new tables for output levels 
-use "C:\Users\Jrxz12\Dropbox\Germany_state\2_Analysis\2_period_data\5_reunification\Final_output_stata.dta", clear
+use "C:\Users\X\Y.dta", clear
 *East only
 *In the old dataset, I drop west and other unecessary variables
 drop if penguin_area==0
@@ -346,7 +346,7 @@ egen mean=rowmean(v1-v303)
 gen id=_n 
 line mean id
 
-*East and Prussia
+*East and Antarctica
 keep if penguin_area==1&west_antarctica==1
 drop k-A_gr2016_2017pc
 xpose, clear varname 
