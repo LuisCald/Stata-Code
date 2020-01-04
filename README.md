@@ -1,9 +1,7 @@
 # Stata Code
-The following will serve as sample pieces of the skills I have learned as a research assistant
-and from personal research. What may be deemed as absurdities are there to respect the confidentiality clauses
-of my contract under the Institute on Behavior and Inequality. The goal is build a full overview of the possible Stata tasks 
-an RA may receive. To add:
+Aside from the description, you will find generic commands as well.
 
-1) Working with different post-estimation commands
-2) Sticking to basic functions - but with advance options
-3) Analysis of Variance and Panel Data (fixed/random effects models)
+1) Howtowork_withESS.do: Includes svyset with ESS8, weighing data, svy functions, reg, making proper inferences through residual analysis 
+2) Replication_AimeeChin.do: Includes reg, ivreg, cnsreg, making tables with esttab and estpost, data cleaning
+3) data_management_code: Includes areg, data cleaning, how to collapse properly 
+4) small_sampleof_statawork.do: Includes reg, exporting tables to latex
